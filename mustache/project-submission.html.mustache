@@ -1,0 +1,61 @@
+<h1>{{ project_title }} - <small>{{ timestamp }}</small></h1>
+<small>{{ submissionID }}</small>
+<hr>
+
+<h5>Short Description:</h5>
+<pre>
+  {{ short_description }}
+</pre>
+
+<h5>Long Description:</h5>
+<pre>
+  {{ long_description }}
+</pre>
+
+<h5>Technical Requirements:</h5>
+<pre>
+  {{ technical_requirements }}
+</pre>
+
+<h5>Focus Areas</h5>
+<p>
+  {{ focus_areas }}
+</p>
+
+<h5>Funding</h5>
+<p>
+  {{ funding }}
+</p>
+
+<h5>Discipline</h5>
+<p>
+  {{ discipline }}
+</p>
+
+<h5>Instrumentation</h5>
+<p>
+  {{ instrumentation }}
+</p>
+
+<hr>
+
+<h2>Artist Details</h2>
+
+<p>
+  <b>Name: </b> {{ artistName }}
+</p>
+<p>
+  <b>Phone: </b> {{ phone }}
+</p>
+<p>
+  <b>Email: </b> {{ email }}
+</p>
+<p>
+  <b>CV: </b><a href="https://s3-eu-west-1.amazonaws.com/tilde-submissions/eoi/{{ cv_filename }}">Link</a>
+</p>
+<p>
+  <b>Bio: </b>
+</p>
+<pre>
+  {{ bio }}
+</pre>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tilde Submissions</title>
+    <link rel="stylesheet" href="/css/app.css" media="screen" title="no title">
+  </head>
+  <body>
+    <% if (!user) { %>
+    	<p>Welcome! Please <a href="/login">log in</a>.</p>
+    <% } else { %>
+      <div class="app_container">
+        <h1>Tilde Submissions</h1>
+        <label for="submissionType"></label>
+        <select id="submissionTypeSelector" name="submissionType">
+          <option value="eoi-project">Project EOIs</option>
+          <option value="eoi-collab">Collaboration EOIs</option>
+          <option value="eoi-fixed-media">Fixed Media Submissions</option>
+          <option value="eoi-academy">Academy Applications</option>
+        </select>
+        <a href="/logout">Logout</a>
+        <div class="submission-list-container">
+          <table id="submissionList">
+            <thead>
+              <th colspan="2">
+                Time Stamp
+              </th>
+              <th colspan="10">
+                Project Title
+              </th>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <script src="js/jquery.min.js" charset="utf-8"></script>
+      <script src="js/featherlight.min.js" charset="utf-8"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="app.js" charset="utf-8"></script>
+    <% } %>
+  </body>
+</html>
