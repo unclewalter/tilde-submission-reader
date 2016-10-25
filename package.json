@@ -1,0 +1,23 @@
+{
+  "name": "tilde-eoi-reader",
+  "version": "1.0.0",
+  "description": "NodeJS app for accessing Tilde submissions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevan Atkins",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.6.12",
+    "compass": "^0.1.1",
+    "express": "^4.14.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-scss": "^1.4.0",
+    "socket.io": "^1.5.1"
+  },
+  "devDependencies": {
+    "gulp-compass": "^2.1.0",
+    "morgan": "^1.7.0"
+  }
+}
