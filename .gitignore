@@ -1,3 +1,5 @@
 node_modules
 bower_components
 aws-config.json
+public/.sass-cache
+db
