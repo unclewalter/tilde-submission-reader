@@ -2,22 +2,13 @@
 <small>{{ submissionID }}</small>
 <hr>
 
-<h3>Kevan - TODO: Academy and Fixed Media pages</h3>
-
-<h2>Short Description:</h2>
+<h2>Description:</h2>
 <pre>
   {{ short_description }}
 </pre>
-
-<h2>Long Description:</h2>
-<pre>
-  {{ long_description }}
-</pre>
-
-<h2>Technical Requirements:</h2>
-<pre>
-  {{ technical_requirements }}
-</pre>
+<p>
+  <b>Audio File: </b><a href="https://s3-eu-west-1.amazonaws.com/tilde-submissions/eoi/{{ cv_filename }}">Link</a>
+</p>
 
 <hr>
 
@@ -27,13 +18,7 @@
   <b>Name: </b> {{ artistName }}
 </p>
 <p>
-  <b>Phone: </b> {{ phone }}
-</p>
-<p>
   <b>Email: </b> {{ email }}
-</p>
-<p>
-  <b>CV: </b><a href="https://s3-eu-west-1.amazonaws.com/tilde-submissions/eoi/{{ cv_filename }}">Link</a>
 </p>
 <p>
   <b>Bio: </b>
