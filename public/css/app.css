@@ -195,47 +195,6 @@ th {
   vertical-align: middle;
 }
 
-body {
-  color: #333;
-  font-family: "Helvectica, sans-serif";
-  font-size: 1em;
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Helvectica, sans-serif";
-  font-size: 1.333em;
-  line-height: 1.2;
-  margin: 0 0 0.75em;
-}
-
-p {
-  margin: 0 0 0.75em;
-}
-
-a {
-  color: #1565c0;
-  text-decoration: none;
-  transition: color 150ms ease;
-}
-
-a:active, a:focus, a:hover {
-  color: #104c90;
-}
-
-hr {
-  border-bottom: 1px solid #ddd;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: 1.5em 0;
-}
-
 /**
  * Featherlight - ultra slim jQuery lightbox
  * Version 1.5.0 - http://noelboss.github.io/featherlight/
@@ -327,6 +286,141 @@ hr {
   }
 }
 
+h1, h2, h3, p {
+  margin: 0;
+}
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0;
+}
+
+p, pre {
+  color: #333;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+a {
+  color: #57ad68;
+  text-decoration: none;
+  font-family: "Questrial", sans-serif;
+}
+
+.page-content .wrapper ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  text-align: justify;
+  margin-bottom: 1.5em;
+}
+
+.page-content .wrapper ul li ul {
+  margin-bottom: 0;
+}
+
+.type {
+  border-bottom: 1px solid;
+  display: inline-block;
+  font-family: "Questrial", sans-serif;
+  font-size: 0.7em;
+  font-weight: 800;
+  margin-bottom: 2em;
+  padding: 0.3em 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "Sanchez", monospace;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 2.6em;
+  }
+}
+
+h2 {
+  font-family: "Sanchez", monospace;
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4em;
+  margin-bottom: 1.1em;
+}
+
+@media screen and (min-width: 600px) {
+  h2 {
+    font-size: 1.3em;
+  }
+}
+
+code {
+  background: #F7F7F7;
+  border-radius: 4.5px;
+  border: 1px solid #E0E0E0;
+  font-size: 0.7em;
+  font-style: normal;
+  padding: 0.1em 0.4em;
+  white-space: nowrap;
+}
+
+h3 {
+  font-family: "Sanchez", monospace;
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-bottom: 0.4em;
+}
+
+p.date {
+  color: rgba(51, 51, 51, 0.4);
+  font-family: "Sanchez", monospace;
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 0.3em;
+}
+
+p, pre {
+  font-family: "Questrial", sans-serif;
+  font-size: 1.05em;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+a.read-more {
+  display: inline-block;
+  font-family: "Questrial", sans-serif;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-left: 0.2em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+a.read-more span {
+  font-family: "Questrial", sans-serif;
+  font-size: 1.5em;
+  font-style: normal;
+  position: absolute;
+  right: -12px;
+  top: -1px;
+}
+
+hr {
+  width: 3em;
+}
+
+p.author {
+  font-family: "Questrial", sans-serif;
+}
+
 .app_container {
   max-width: 1200px;
   margin-left: auto;
@@ -372,5 +466,4 @@ pre {
   /* Opera 7 */
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */
-  font-family: "Helvectica, sans-serif";
 }
