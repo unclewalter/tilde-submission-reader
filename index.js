@@ -11,11 +11,22 @@ var fs = require('fs');
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var db = require('./db');
+var crypto = require('crypto');
 
 var debug = function() {
   if (config.debug) {
     console.log.apply(console, arguments);
   }
+};
+
+var sha512 = function(password, salt){
+    var hash = crypto.createHmac('sha512', salt); /** Hashing algorithm sha512 */
+    hash.update(password);
+    var value = hash.digest('hex');
+    return {
+        salt:salt,
+        passwordHash:value
+    };
 };
 
 app.set('views', __dirname + '/views');
@@ -44,7 +55,9 @@ passport.use(new Strategy(
       if (!user) {
         return cb(null, false);
       }
-      if (user.password != password) {
+      var shaDigest = sha512(password, user.passwordSalt);
+      console.log("Salted: "+JSON.stringify(shaDigest));
+      if (user.password != shaDigest.passwordHash) {
         return cb(null, false);
       }
       return cb(null, user);
@@ -182,6 +195,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/',
   function(req, res) {
     res.render('index', { user: req.user });
+    console.log("USER INFO:"+ JSON.stringify(req.user));
   });
 
 app.get('/login',
