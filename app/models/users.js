@@ -1,4 +1,7 @@
-const AWS = require('aws-sdk');
+var AWS = require('aws-sdk');
+
+// Loading in the secret stuff
+AWS.config.loadFromPath(__dirname+'/aws-config.json');
 
 exports.findById = function(uid, cb) {
   var docClient = new AWS.DynamoDB.DocumentClient();
