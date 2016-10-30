@@ -195,7 +195,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/',
   function(req, res) {
     res.render('index', { user: req.user });
-    console.log("USER INFO:"+ JSON.stringify(req.user));
   });
 
 app.get('/login',
