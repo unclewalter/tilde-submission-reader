@@ -20,7 +20,10 @@
           <option value="eoi-fixed-media">Fixed Media Submissions</option>
           <option value="eoi-academy">Academy Applications</option>
         </select>
-        <a href="/logout">Logout</a>
+        <p>
+          Welcome, <%= user.displayName %><br>
+          <a href="/logout">Logout</a>
+        </p>
         <div class="submission-list-container">
           <table id="submissionList">
             <thead>
