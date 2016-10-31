@@ -8,6 +8,7 @@
   },
   "author": "Kevan Atkins",
   "license": "MIT",
+  "repository": "https://github.com/unclewalter/tilde-submission-reader",
   "dependencies": {
     "aws-sdk": "^2.6.12",
     "body-parser": "^1.15.2",
