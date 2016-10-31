@@ -4,3 +4,4 @@ aws-config.json
 public/.sass-cache
 *.log
 .env
+.sass-cache
