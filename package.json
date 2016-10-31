@@ -16,14 +16,15 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "express-session": "^1.14.1",
-    "gulp-sass": "^2.3.2",
-    "gulp-scss": "^1.4.0",
+    "habitat": "^3.1.2",
     "mustache": "^2.2.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "socket.io": "^1.5.1"
   },
   "devDependencies": {
+    "gulp-sass": "^2.3.2",
+    "gulp-scss": "^1.4.0",
     "gulp-compass": "^2.1.0",
     "morgan": "^1.7.0"
   }

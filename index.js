@@ -7,6 +7,11 @@ var io = require('socket.io')(server);
 var path = require('path');
 var passport = require('passport');
 var models = require('./app/models');
+var env = (function(){
+      var Habitat = require("habitat");
+      Habitat.load();
+      return new Habitat();
+    }())
 
 require('./config/passport')(passport); // pass passport for configuration
 
@@ -24,7 +29,7 @@ app.use(require('body-parser').urlencoded({
   extended: true
 }));
 app.use(require('express-session')({
-  secret: 'keyboard cat',
+  secret: env.get("SESSION_SECRET"),
   resave: false,
   saveUninitialized: false
 }));
