@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "gulp-sass": "^2.3.2",
-    "gulp-scss": "^1.4.0",
     "gulp-compass": "^2.1.0",
     "morgan": "^1.7.0"
   }
