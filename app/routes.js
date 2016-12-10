@@ -4,6 +4,7 @@ module.exports = function(app, passport) {
       res.render('index', {
         user: req.user
       });
+      console.log(req);
     });
 
   app.get('/login',

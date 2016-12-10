@@ -31,7 +31,6 @@ module.exports = function(passport) {
       });
     }));
 
-
   // Configure Passport authenticated session persistence.
   //
   // In order to restore authentication state across HTTP requests, Passport needs
@@ -39,6 +38,8 @@ module.exports = function(passport) {
   // typical implementation of this is as simple as supplying the user ID when
   // serializing, and querying the user record by ID from the database when
   // deserializing.
+
+
   passport.serializeUser(function(user, cb) {
     cb(null, user.id);
   });
@@ -48,7 +49,7 @@ module.exports = function(passport) {
       if (err) {
         return cb(err);
       }
-      cb(null, user);
+      return cb(null, user);
     });
   });
 };

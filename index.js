@@ -49,7 +49,21 @@ io.on('connection', function(socket) {
   socket.on('getSubmission', function(submissionID) {
     models.submissions.getSubmission(submissionID, function(htmlOutput) {
       socket.emit('submissionEntry', htmlOutput);
-    })
+    });
+  });
+
+  socket.on('submitEvaluation', function(submissionID, evaluation) {
+    var userID;
+    socket.emit('getSession', function(user) {
+      userID = user;
+    });
+    models.evaluations.submitEvaluation(userID, submissionID, evaluation, function(err, data) {
+      if (err) {
+        console.log("Unable to add item. Error JSON: "+JSON.stringify(err, null, 2))
+      } else {
+        console.log("Added item:", JSON.stringify(data, null, 2));
+      }
+    });
   });
 
   socket.on('disconnect', function() {
@@ -63,7 +77,7 @@ app.use(logger('dev'));
 // serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// routes ======================================================================
+// routes
 require('./app/routes.js')(app, passport);
 
 // start the apps
