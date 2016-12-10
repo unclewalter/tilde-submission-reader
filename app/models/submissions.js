@@ -14,7 +14,7 @@ exports.listSubmissions = function(submissionFilter, cb) {
     "eoi-project": "submissionID, submissionType, #ts, artistName, project_title, focus_areas",
     "eoi-fixed-media": "submissionID, submissionType, #ts",
     "eoi-collab": "submissionID, submissionType, #ts, artistName",
-    "eoi-academy": "submissionID, submissionType, #ts"
+    "eoi-academy": "submissionID, submissionType, artistName, #ts"
   }
 
   var params = {
